@@ -17,33 +17,48 @@ class NewShare {
     case forbidden = "不可申購"
   }
   
-  let companyName = ""
-  let stockCode = ""
-  let marketPrice = 0
-  let subscriptionPrice = 0
-  let issueAmount = 0
-  let everLowerInHalfYear = false
-  let didDropThreeDays = false
-  let isIPO = false
-  let tradingAmount = 0
+  var companyName = ""
+  var stockCode = 0
+  var marketPrice = 0
+  var subscriptionPrice = 0
+  var issueAmount = 0
+  var everLowerInHalfYear = false
+  var didDropThreeDays = false
+  var isIPO = false
+  var tradingAmount = 0
+  let unit = 1000
   
-  var difference: Int {
-    marketPrice - subscriptionPrice
+  var isValid: Bool {
+    // 暫時將tradingAmount禁止為0
+    !(companyName.isEmpty || stockCode == 0 || marketPrice == 0 || subscriptionPrice == 0 || issueAmount == 0 || tradingAmount == 0)
   }
+  
+  // store property的價格是一股的價格，要乘以1000股計算
+  var actualMarketPrice: Int {
+    marketPrice * unit
+  }
+  var actualSubscriptionPrice: Int {
+    subscriptionPrice * unit
+  }
+  // 價差
+  var difference: Int {
+    actualMarketPrice - actualSubscriptionPrice
+  }
+  // 報酬率
   var returnRate: Double {
-    Double(difference) / Double(marketPrice)
+    Double(difference) / Double(actualMarketPrice)
   }
   var isInLowDemand: Bool {
     (tradingAmount < 10) || ((Double(tradingAmount) / Double(issueAmount)) < 0.1)
   }
   var reachStandard: Bool {
-    (marketPrice >= 100_000 && returnRate >= 0.15) || (marketPrice > 100_000 && returnRate >= 0.1)
+    (actualMarketPrice >= 100_000 && returnRate >= 0.1) || (actualMarketPrice < 100_000 && returnRate >= 0.15)
   }
   var forbidden: Bool {
     difference < 0 || (difference < 2500 && returnRate < 0.1)
   }
   var getExtraPoint: Bool {
-    (marketPrice >= 100_000 && returnRate >= 0.2) || (marketPrice > 100_000 && returnRate >= 0.15) || isIPO
+    (actualMarketPrice >= 100_000 && returnRate >= 0.2) || (actualMarketPrice > 100_000 && returnRate >= 0.15) || isIPO || difference > 20_000
   }
   var getExtraRisk: Bool {
     everLowerInHalfYear || didDropThreeDays || isInLowDemand
@@ -53,6 +68,7 @@ class NewShare {
     if forbidden {
       return .forbidden
     } else if reachStandard {
+      print("reach standard")
       if getExtraPoint {
         return getExtraRisk ? .tolerable : .highlyRecommended
       } else {

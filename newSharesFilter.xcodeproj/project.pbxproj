@@ -13,6 +13,7 @@
 		BF2299CE289D5A3A00518875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2299CC289D5A3A00518875 /* Main.storyboard */; };
 		BF2299D0289D5A3A00518875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2299CF289D5A3A00518875 /* Assets.xcassets */; };
 		BF2299D3289D5A3A00518875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2299D1289D5A3A00518875 /* LaunchScreen.storyboard */; };
+		BF2299DC289D768700518875 /* NewShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2299DB289D768700518875 /* NewShare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF2299CF289D5A3A00518875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2299D2289D5A3A00518875 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2299D4289D5A3A00518875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF2299DB289D768700518875 /* NewShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		BF2299C5289D5A3A00518875 /* newSharesFilter */ = {
 			isa = PBXGroup;
 			children = (
+				BF2299DA289D766400518875 /* Model */,
 				BF2299C6289D5A3A00518875 /* AppDelegate.swift */,
 				BF2299C8289D5A3A00518875 /* SceneDelegate.swift */,
 				BF2299CA289D5A3A00518875 /* AddNewShareViewController.swift */,
@@ -65,6 +68,14 @@
 				BF2299D4289D5A3A00518875 /* Info.plist */,
 			);
 			path = newSharesFilter;
+			sourceTree = "<group>";
+		};
+		BF2299DA289D766400518875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF2299DB289D768700518875 /* NewShare.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				BF2299CB289D5A3A00518875 /* AddNewShareViewController.swift in Sources */,
 				BF2299C7289D5A3A00518875 /* AppDelegate.swift in Sources */,
+				BF2299DC289D768700518875 /* NewShare.swift in Sources */,
 				BF2299C9289D5A3A00518875 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

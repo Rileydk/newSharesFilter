@@ -71,6 +71,15 @@ class AddNewShareViewController: UIViewController {
     alert.addAction(action)
     present(alert, animated: true)
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowAnalysisResult" {
+      guard let newShareAnalysisVC =  segue.destination as? NewShareAnalysisViewController else {
+        return
+      }
+      newShareAnalysisVC.newShare = newShare
+    }
+  }
 }
 
 extension AddNewShareViewController: UITextFieldDelegate {

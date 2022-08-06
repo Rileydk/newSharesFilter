@@ -18,18 +18,19 @@ class NewShareAnalysisViewController: UIViewController {
   @IBOutlet weak var analysisResultLabel: UILabel!
   @IBOutlet weak var dateAndTimeLabel: UILabel!
   
+  var newShare: NewShare?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    companyNameLabel.text = "長榮"
-    stockCodeLabel.text = "2603"
-    marketPriceLabel.text = "99200"
-    subscriptionPriceLabel.text = "890000"
-    differenceLabel.text = "10200"
-    returnRateLabel.text = "-3435"
-    analysisResultLabel.text = "有風險，仍建議申購"
-    dateAndTimeLabel.text = "2021/12/31 23:59"
-    
+//    companyNameLabel.text = "長榮"
+//    stockCodeLabel.text = "2603"
+//    marketPriceLabel.text = "99200"
+//    subscriptionPriceLabel.text = "890000"
+//    differenceLabel.text = "10200"
+//    returnRateLabel.text = "-3435"
+//    analysisResultLabel.text = "有風險，仍建議申購"
+//    dateAndTimeLabel.text = "2021/12/31 23:59"
   }
 
 

@@ -50,7 +50,7 @@ class NewShareAnalysisViewController: UIViewController {
   }
   
   @objc func discardNewAnalysis() {
-    print("discard")
+    performSegue(withIdentifier: "DiscardNewAnalysis", sender: nil)
   }
 
 }

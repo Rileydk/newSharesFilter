@@ -422,9 +422,11 @@
                         <outlet property="returnRateLabel" destination="Drv-GV-Z9B" id="6hS-jn-ebG"/>
                         <outlet property="stockCodeLabel" destination="obu-hm-WD6" id="94H-RL-14a"/>
                         <outlet property="subscriptionPriceLabel" destination="hmi-9N-QUn" id="wP1-gu-1Fa"/>
+                        <segue destination="go7-8J-l3e" kind="unwind" identifier="DiscardNewAnalysis" unwindAction="discardNewAnalysisWithUnwindSegue:" id="ebi-mr-W0q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Tp-aBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="go7-8J-l3e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1103" y="33"/>
         </scene>

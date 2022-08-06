@@ -89,6 +89,8 @@ class NewSharesAnalysisTableViewController: UITableViewController {
       newShareAnalysisVC.newShare = share
     }
   }
+  
+  @IBAction func discardNewAnalysis(unwindSegue: UIStoryboardSegue) { }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

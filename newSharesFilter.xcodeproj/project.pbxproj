@@ -62,8 +62,8 @@
 		BF2299C5289D5A3A00518875 /* newSharesFilter */ = {
 			isa = PBXGroup;
 			children = (
-				BF2299DD289E1C7F00518875 /* View Controllers */,
 				BF2299DA289D766400518875 /* Model */,
+				BF2299DD289E1C7F00518875 /* View Controllers */,
 				BF2299C6289D5A3A00518875 /* AppDelegate.swift */,
 				BF2299C8289D5A3A00518875 /* SceneDelegate.swift */,
 				BF2299CC289D5A3A00518875 /* Main.storyboard */,

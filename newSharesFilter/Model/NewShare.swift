@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NewShare {
   enum Result: String {
@@ -69,7 +70,6 @@ class NewShare {
     if forbidden {
       return .forbidden
     } else if reachStandard {
-      print("reach standard")
       if getExtraPoint {
         return getExtraRisk ? .tolerable : .highlyRecommended
       } else {
@@ -84,7 +84,7 @@ class NewShare {
     }
   }
   
-  var color: String {
+  var badgeColor: String {
     switch result {
     case .highlyRecommended:
       return "blue"
@@ -98,6 +98,17 @@ class NewShare {
       return "red"
     case .forbidden:
       return "brown"
+    }
+  }
+  
+  var iconColor: UIColor {
+    switch result {
+    case .highlyRecommended, .recommended:
+      return .green
+    case .tolerable, .thinkTwice:
+      return .yellow
+    case .notRecommended, .forbidden:
+      return .red
     }
   }
 }

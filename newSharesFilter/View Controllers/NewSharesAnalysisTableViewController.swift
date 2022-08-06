@@ -33,13 +33,16 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     share2.companyName = "B company"
     share2.stockCode = "1234"
     share2.marketPrice = 1234.0
-    share2.subscriptionPrice = 1000.0
-    share2.issueAmount = 400
+    share2.subscriptionPrice = 500.0
+    share2.issueAmount = 700
+    share2.tradingAmount = 350
+    share2.everLowerInHalfYear = false
+    share2.didDropThreeDays = false
     
     share3.companyName = "C company"
     share3.stockCode = "1234"
     share3.marketPrice = 1234.0
-    share3.subscriptionPrice = 1000.0
+    share3.subscriptionPrice = 1300.0
     share3.issueAmount = 400
     
     shares = [share1, share2, share3]
@@ -62,6 +65,7 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     let share = shares[indexPath.row]
     content.text = "\(share.companyName) \(share.stockCode)"
     content.secondaryText = "價差：\(share.difference)   預期報酬：\(String(Int((share.returnRate) * 100.0)) + "%")"
+    content.image = UIImage(systemName: "circle.fill")?.withTintColor(share.iconColor, renderingMode: .alwaysOriginal)
     cell.contentConfiguration = content
     return cell
   }

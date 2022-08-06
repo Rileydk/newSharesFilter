@@ -410,6 +410,16 @@
                             <constraint firstItem="djQ-Nz-Oy9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e2f-NW-NNa" secondAttribute="leading" constant="20" id="wsa-rt-vej"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="analysisResultLabel" destination="Zsu-gj-qJN" id="IUh-jV-JdQ"/>
+                        <outlet property="companyNameLabel" destination="ZVs-BU-RIl" id="3e0-br-bFT"/>
+                        <outlet property="dateAndTimeLabel" destination="wgR-sf-Xil" id="yYH-Qn-HtZ"/>
+                        <outlet property="differenceLabel" destination="RNG-pQ-dU2" id="vZm-eH-cfp"/>
+                        <outlet property="marketPriceLabel" destination="OJd-V2-hc0" id="cdH-Bq-1CW"/>
+                        <outlet property="returnRateLabel" destination="Drv-GV-Z9B" id="6hS-jn-ebG"/>
+                        <outlet property="stockCodeLabel" destination="obu-hm-WD6" id="94H-RL-14a"/>
+                        <outlet property="subscriptionPriceLabel" destination="hmi-9N-QUn" id="wP1-gu-1Fa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Tp-aBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

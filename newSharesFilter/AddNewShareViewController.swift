@@ -49,6 +49,15 @@ class AddNewShareViewController: UIViewController {
     print(newShare.result.rawValue)
   }
 
-
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    view.endEditing(true)
+  }
+  
 }
 
+extension AddNewShareViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+}

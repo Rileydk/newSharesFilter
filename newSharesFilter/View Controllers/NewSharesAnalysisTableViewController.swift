@@ -90,6 +90,15 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     }
   }
   
+  @IBAction func saveNewAnalysis(unwindSegue: UIStoryboardSegue) {
+    guard let newShareAnalysisVC = unwindSegue.source as? NewShareAnalysisViewController,
+          let newShare = newShareAnalysisVC.newShare else {
+      return
+    }
+    shares.append(newShare)
+    tableView.reloadData()
+  }
+  
   @IBAction func discardNewAnalysis(unwindSegue: UIStoryboardSegue) { }
 
     /*

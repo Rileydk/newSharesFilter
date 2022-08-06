@@ -423,6 +423,7 @@
                         <outlet property="stockCodeLabel" destination="obu-hm-WD6" id="94H-RL-14a"/>
                         <outlet property="subscriptionPriceLabel" destination="hmi-9N-QUn" id="wP1-gu-1Fa"/>
                         <segue destination="go7-8J-l3e" kind="unwind" identifier="DiscardNewAnalysis" unwindAction="discardNewAnalysisWithUnwindSegue:" id="ebi-mr-W0q"/>
+                        <segue destination="go7-8J-l3e" kind="unwind" identifier="SaveNewAnalysis" unwindAction="saveNewAnalysisWithUnwindSegue:" id="jZN-V1-sEp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Tp-aBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

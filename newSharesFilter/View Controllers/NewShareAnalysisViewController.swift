@@ -46,7 +46,7 @@ class NewShareAnalysisViewController: UIViewController {
   }
 
   @objc func saveNewAnalysis() {
-    print("save")
+    performSegue(withIdentifier: "SaveNewAnalysis", sender: nil)
   }
   
   @objc func discardNewAnalysis() {

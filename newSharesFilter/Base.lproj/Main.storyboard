@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="GSL-Di-nLY">
-                                <rect key="frame" x="20" y="146" width="374" height="517.5"/>
+                                <rect key="frame" x="20" y="102" width="374" height="517.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oUl-cF-d6Q">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -231,7 +231,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3b-YF-Ibo">
-                                <rect key="frame" x="142" y="735" width="130" height="47"/>
+                                <rect key="frame" x="142" y="691" width="130" height="47"/>
                                 <color key="backgroundColor" red="0.078431372549019607" green="0.61176470588235299" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -269,24 +269,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900.00000000000011" y="59.598214285714285"/>
+            <point key="canvasLocation" x="99" y="-516"/>
         </scene>
         <!--New Share Analysis View Controller-->
         <scene sceneID="VFn-h3-Chw">
             <objects>
                 <viewController id="UQh-46-NUw" customClass="NewShareAnalysisViewController" customModule="newSharesFilter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cym-WD-olC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台積電" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="ZVs-BU-RIl">
-                                <rect key="frame" x="20" y="147" width="374" height="38.5"/>
+                                <rect key="frame" x="20" y="103" width="374" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2330" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="obu-hm-WD6">
-                                <rect key="frame" x="175.5" y="195.5" width="63" height="31.5"/>
+                                <rect key="frame" x="175.5" y="151.5" width="63" height="31.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="877-EF-a1s"/>
                                 </constraints>
@@ -295,7 +295,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022/08/06 11:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgR-sf-Xil">
-                                <rect key="frame" x="139.5" y="631" width="135.5" height="20.5"/>
+                                <rect key="frame" x="139.5" y="587" width="135.5" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="XZR-Z8-OIH"/>
                                 </constraints>
@@ -304,14 +304,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不建議申購" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsu-gj-qJN">
-                                <rect key="frame" x="116.5" y="563" width="181.5" height="43"/>
+                                <rect key="frame" x="116.5" y="519" width="181.5" height="43"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="djQ-Nz-Oy9">
-                                <rect key="frame" x="78.5" y="257" width="257" height="185"/>
+                                <rect key="frame" x="78.5" y="213" width="257" height="185"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="KXl-t0-mh8">
                                         <rect key="frame" x="0.0" y="0.0" width="89.5" height="185"/>
@@ -426,7 +426,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Tp-aBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815.9420289855075" y="59.598214285714285"/>
+            <point key="canvasLocation" x="1103" y="33"/>
+        </scene>
+        <!--New Shares Analysis Table View Controller-->
+        <scene sceneID="xIy-bj-v77">
+            <objects>
+                <tableViewController id="zE5-Gg-UPG" customClass="NewSharesAnalysisTableViewController" customModule="newSharesFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="F8p-Ea-6we">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="h8H-sx-Aey">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h8H-sx-Aey" id="K3S-6v-OIK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zE5-Gg-UPG" id="mQF-jk-3aA"/>
+                            <outlet property="delegate" destination="zE5-Gg-UPG" id="aSj-X0-SBf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="daC-y9-Zeb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIH-Uo-0aN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-753" y="34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="60z-VW-gtT">
@@ -439,12 +468,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SWC-YP-VOh"/>
+                        <segue destination="zE5-Gg-UPG" kind="relationship" relationship="rootViewController" id="xEm-uD-qSr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEb-dm-zsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.144927536231885" y="59.598214285714285"/>
+            <point key="canvasLocation" x="-1528" y="33"/>
         </scene>
     </scenes>
     <resources>

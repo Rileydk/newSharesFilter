@@ -15,6 +15,7 @@
 		BF2299D3289D5A3A00518875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2299D1289D5A3A00518875 /* LaunchScreen.storyboard */; };
 		BF2299DC289D768700518875 /* NewShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2299DB289D768700518875 /* NewShare.swift */; };
 		BF2299DF289E1CA700518875 /* NewShareAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2299DE289E1CA700518875 /* NewShareAnalysisViewController.swift */; };
+		BFD27196289E541200174EB1 /* NewSharesAnalysisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD27195289E541200174EB1 /* NewSharesAnalysisTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BF2299D4289D5A3A00518875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF2299DB289D768700518875 /* NewShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShare.swift; sourceTree = "<group>"; };
 		BF2299DE289E1CA700518875 /* NewShareAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShareAnalysisViewController.swift; sourceTree = "<group>"; };
+		BFD27195289E541200174EB1 /* NewSharesAnalysisTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSharesAnalysisTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				BF2299CA289D5A3A00518875 /* AddNewShareViewController.swift */,
 				BF2299DE289E1CA700518875 /* NewShareAnalysisViewController.swift */,
+				BFD27195289E541200174EB1 /* NewSharesAnalysisTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD27196289E541200174EB1 /* NewSharesAnalysisTableViewController.swift in Sources */,
 				BF2299DF289E1CA700518875 /* NewShareAnalysisViewController.swift in Sources */,
 				BF2299CB289D5A3A00518875 /* AddNewShareViewController.swift in Sources */,
 				BF2299C7289D5A3A00518875 /* AppDelegate.swift in Sources */,

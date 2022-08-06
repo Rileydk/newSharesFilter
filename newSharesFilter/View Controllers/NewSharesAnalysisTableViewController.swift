@@ -10,6 +10,10 @@ import UIKit
 class NewSharesAnalysisTableViewController: UITableViewController {
   
   var shares = [NewShare]()
+  
+  deinit {
+    NotificationCenter.default.removeObserver(self)
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -48,6 +52,8 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     share3.issueAmount = 400
     
     shares = [share1, share2, share3]
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(updateShareList(notification:)), name: .newAnalysisSaved, object: nil)
   }
 
   // MARK: - Table view data source
@@ -91,15 +97,23 @@ class NewSharesAnalysisTableViewController: UITableViewController {
   }
   
   @IBAction func saveNewAnalysis(unwindSegue: UIStoryboardSegue) {
-    guard let newShareAnalysisVC = unwindSegue.source as? NewShareAnalysisViewController,
-          let newShare = newShareAnalysisVC.newShare else {
+//    guard let newShareAnalysisVC = unwindSegue.source as? NewShareAnalysisViewController,
+//          let newShare = newShareAnalysisVC.newShare else {
+//      return
+//    }
+//    shares.append(newShare)
+//    tableView.reloadData()
+  }
+  
+  @IBAction func discardNewAnalysis(unwindSegue: UIStoryboardSegue) { }
+  
+  @objc func updateShareList(notification: Notification) {
+    guard let newShare = notification.object as? NewShare else {
       return
     }
     shares.append(newShare)
     tableView.reloadData()
   }
-  
-  @IBAction func discardNewAnalysis(unwindSegue: UIStoryboardSegue) { }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

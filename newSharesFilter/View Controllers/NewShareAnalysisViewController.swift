@@ -46,6 +46,7 @@ class NewShareAnalysisViewController: UIViewController {
   }
 
   @objc func saveNewAnalysis() {
+    NotificationCenter.default.post(name: .newAnalysisSaved, object: newShare)
     performSegue(withIdentifier: "SaveNewAnalysis", sender: nil)
   }
   
@@ -53,4 +54,8 @@ class NewShareAnalysisViewController: UIViewController {
     performSegue(withIdentifier: "DiscardNewAnalysis", sender: nil)
   }
 
+}
+
+extension Notification.Name {
+  static let newAnalysisSaved = Notification.Name("NewAnalysisSaved")
 }

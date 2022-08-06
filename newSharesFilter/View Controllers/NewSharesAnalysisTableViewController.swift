@@ -67,7 +67,7 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     let share = shares[indexPath.row]
     content.text = "\(share.companyName) \(share.stockCode)"
     content.secondaryText = "價差：\(share.difference)   預期報酬：\(String(Int((share.returnRate) * 100.0)) + "%")"
-    content.image = UIImage(systemName: "circle.fill")?.withTintColor(share.iconColor, renderingMode: .alwaysOriginal)
+    content.image = UIImage(systemName: "circle.fill")?.withTintColor(share.color, renderingMode: .alwaysOriginal)
     cell.contentConfiguration = content
     return cell
   }

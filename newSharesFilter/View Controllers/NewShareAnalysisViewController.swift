@@ -30,6 +30,7 @@ class NewShareAnalysisViewController: UIViewController {
     differenceLabel.text = String((newShare?.difference)!)
     returnRateLabel.text = String(Int((newShare?.returnRate)! * 100.0)) + "%"
     analysisResultLabel.text = newShare?.result.rawValue
+    analysisResultLabel.backgroundColor = newShare?.color
     
     let date = Date()
     let df = DateFormatter()

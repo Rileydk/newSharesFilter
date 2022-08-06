@@ -84,24 +84,8 @@ class NewShare {
     }
   }
   
-  var badgeColor: String {
-    switch result {
-    case .highlyRecommended:
-      return "blue"
-    case .recommended:
-      return "green"
-    case .tolerable:
-      return "yellow"
-    case .thinkTwice:
-      return "orange"
-    case .notRecommended:
-      return "red"
-    case .forbidden:
-      return "brown"
-    }
-  }
-  
-  var iconColor: UIColor {
+  // for icon in the list and badge in the result
+  var color: UIColor {
     switch result {
     case .highlyRecommended, .recommended:
       return .green

@@ -18,7 +18,7 @@ class NewShare {
   }
   
   var companyName = ""
-  var stockCode = 0
+  var stockCode = ""
   var marketPrice = 0
   var subscriptionPrice = 0
   var issueAmount = 0

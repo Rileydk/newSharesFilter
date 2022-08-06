@@ -30,7 +30,7 @@ class NewShare {
   
   var isValid: Bool {
     // 暫時將tradingAmount禁止為0
-    !(companyName.isEmpty || stockCode.isEmpty || marketPrice == 0.0 || subscriptionPrice == 0.0 || issueAmount == 0 || tradingAmount == 0)
+    !(companyName.isEmpty || stockCode.isEmpty || marketPrice.isZero || subscriptionPrice.isZero || issueAmount == 0 || tradingAmount == 0)
   }
   
   // store property的價格是一股的價格，要乘以1000股計算

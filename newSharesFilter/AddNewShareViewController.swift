@@ -33,26 +33,44 @@ class AddNewShareViewController: UIViewController {
     newShare.tradingAmount = value
   }
   
+  @IBAction func generateAnalysis(_ sender: UIButton) {
+     updateNewShareInfo()
+    if newShare.isValid {
+      print("valid!")
+    } else {
+      alertInvalidInput()
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    newShare.companyName = "長榮"
-    newShare.stockCode = 2133
-    newShare.marketPrice = 210
-    newShare.subscriptionPrice = 180
-    newShare.issueAmount = 2550
-    newShare.tradingAmount = 600
-    newShare.everLowerInHalfYear = false
-    newShare.didDropThreeDays = false
-    newShare.isIPO = false
-    print(newShare.returnRate)
-    print(newShare.result.rawValue)
+    newShare.tradingAmount = 500
   }
-
+  
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     view.endEditing(true)
   }
   
+  func updateNewShareInfo() {
+    newShare.companyName = companyNameTextField.text!
+    newShare.stockCode = String(stockCodeTextField.text!)
+    guard let marketPrice = Int(marketPriceTextField.text!),
+          let subscriptionPrice = Int(subscriptionPriceTextField.text!),
+          let issueAmount = Int(subscriptionPriceTextField.text!) else {
+      return
+    }
+    newShare.marketPrice = Double(marketPrice)
+    newShare.subscriptionPrice = Double(subscriptionPrice)
+    newShare.issueAmount = issueAmount
+  }
+  
+  func alertInvalidInput() {
+    let alert = UIAlertController(title: "Ohoh, 有東西漏填囉", message: "請填寫所有欄位", preferredStyle: .alert)
+    let action = UIAlertAction(title: "OK", style: .default)
+    alert.addAction(action)
+    present(alert, animated: true)
+  }
 }
 
 extension AddNewShareViewController: UITextFieldDelegate {

@@ -23,14 +23,19 @@ class NewShareAnalysisViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-//    companyNameLabel.text = "長榮"
-//    stockCodeLabel.text = "2603"
-//    marketPriceLabel.text = "99200"
-//    subscriptionPriceLabel.text = "890000"
-//    differenceLabel.text = "10200"
-//    returnRateLabel.text = "-3435"
-//    analysisResultLabel.text = "有風險，仍建議申購"
-//    dateAndTimeLabel.text = "2021/12/31 23:59"
+    companyNameLabel.text = newShare?.companyName
+    stockCodeLabel.text = newShare?.stockCode
+    marketPriceLabel.text = String(Int((newShare?.actualMarketPrice)!))
+    subscriptionPriceLabel.text = String(Int((newShare?.actualSubscriptionPrice)!))
+    differenceLabel.text = String((newShare?.difference)!)
+    returnRateLabel.text = String(Int((newShare?.returnRate)! * 100.0)) + "%"
+    analysisResultLabel.text = newShare?.result.rawValue
+    
+    let date = Date()
+    let df = DateFormatter()
+    df.dateFormat = "yyyy/MM/dd HH:mm"
+    let dateString = df.string(from: date)
+    dateAndTimeLabel.text = dateString
   }
 
 

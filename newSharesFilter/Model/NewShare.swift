@@ -41,12 +41,12 @@ class NewShare {
     subscriptionPrice * unit
   }
   // 價差
-  var difference: Double {
-    actualMarketPrice - actualSubscriptionPrice
+  var difference: Int {
+    Int(actualMarketPrice - actualSubscriptionPrice)
   }
   // 報酬率
   var returnRate: Double {
-    difference / actualMarketPrice
+    Double(difference) / actualMarketPrice
   }
   var isInLowDemand: Bool {
     (tradingAmount < 10) || ((Double(tradingAmount) / Double(issueAmount)) < 0.1)

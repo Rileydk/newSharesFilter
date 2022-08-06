@@ -36,7 +36,6 @@ class AddNewShareViewController: UIViewController {
   @IBAction func generateAnalysis(_ sender: UIButton) {
      updateNewShareInfo()
     if newShare.isValid {
-      print("valid!")
     } else {
       alertInvalidInput()
     }
@@ -55,13 +54,14 @@ class AddNewShareViewController: UIViewController {
   func updateNewShareInfo() {
     newShare.companyName = companyNameTextField.text!
     newShare.stockCode = String(stockCodeTextField.text!)
-    guard let marketPrice = Int(marketPriceTextField.text!),
-          let subscriptionPrice = Int(subscriptionPriceTextField.text!),
-          let issueAmount = Int(subscriptionPriceTextField.text!) else {
+    guard let marketPrice = Double(marketPriceTextField.text!),
+          let subscriptionPrice = Double(subscriptionPriceTextField.text!),
+          let issueAmount = Int(issueAmountTextField.text!) else {
       return
     }
-    newShare.marketPrice = Double(marketPrice)
-    newShare.subscriptionPrice = Double(subscriptionPrice)
+    newShare.marketPrice = marketPrice
+    print(newShare.marketPrice)
+    newShare.subscriptionPrice = subscriptionPrice
     newShare.issueAmount = issueAmount
   }
   

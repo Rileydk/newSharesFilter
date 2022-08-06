@@ -72,8 +72,22 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "ShowOldAnalysis", sender: shares[indexPath.row])
+  }
+  
   @objc func analyzeNewShare() {
     performSegue(withIdentifier: "AnalyzeNewShare", sender: nil)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowOldAnalysis" {
+      guard let newShareAnalysisVC = segue.destination as? NewShareAnalysisViewController,
+            let share = sender as? NewShare else {
+        return
+      }
+      newShareAnalysisVC.newShare = share
+    }
   }
 
     /*

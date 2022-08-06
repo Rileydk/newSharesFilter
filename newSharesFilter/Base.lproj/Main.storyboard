@@ -463,6 +463,7 @@
                     <navigationItem key="navigationItem" id="daC-y9-Zeb"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AnalyzeNewShare" id="xoU-Uu-302"/>
+                        <segue destination="UQh-46-NUw" kind="show" identifier="ShowOldAnalysis" id="BW9-Ge-dm9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIH-Uo-0aN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -488,6 +489,9 @@
             <point key="canvasLocation" x="-1528" y="33"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BW9-Ge-dm9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

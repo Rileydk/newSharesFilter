@@ -28,7 +28,7 @@ class NewShareAnalysisViewController: UIViewController {
     differenceLabel.text = "10200"
     returnRateLabel.text = "-3435"
     analysisResultLabel.text = "有風險，仍建議申購"
-    dateAndTimeLabel.text = "2021/12/33"
+    dateAndTimeLabel.text = "2021/12/31 23:59"
     
   }
 

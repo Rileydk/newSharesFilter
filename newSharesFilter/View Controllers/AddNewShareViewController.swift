@@ -60,7 +60,6 @@ class AddNewShareViewController: UIViewController {
       return
     }
     newShare.marketPrice = marketPrice
-    print(newShare.marketPrice)
     newShare.subscriptionPrice = subscriptionPrice
     newShare.issueAmount = issueAmount
   }

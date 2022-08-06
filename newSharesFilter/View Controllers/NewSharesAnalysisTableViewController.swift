@@ -20,6 +20,8 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem
     
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(analyzeNewShare))
+    
     let share1 = NewShare()
     let share2 = NewShare()
     let share3 = NewShare()
@@ -68,6 +70,10 @@ class NewSharesAnalysisTableViewController: UITableViewController {
     content.image = UIImage(systemName: "circle.fill")?.withTintColor(share.iconColor, renderingMode: .alwaysOriginal)
     cell.contentConfiguration = content
     return cell
+  }
+  
+  @objc func analyzeNewShare() {
+    performSegue(withIdentifier: "AnalyzeNewShare", sender: nil)
   }
 
     /*

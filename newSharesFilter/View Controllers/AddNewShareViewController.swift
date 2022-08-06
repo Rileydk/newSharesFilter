@@ -83,6 +83,7 @@ class AddNewShareViewController: UIViewController {
   }
 }
 
+//MARK: - UITextFieldDelegate
 extension AddNewShareViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()

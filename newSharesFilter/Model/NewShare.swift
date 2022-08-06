@@ -22,9 +22,9 @@ class NewShare {
   var marketPrice = 0
   var subscriptionPrice = 0
   var issueAmount = 0
-  var everLowerInHalfYear = false
-  var didDropThreeDays = false
-  var isIPO = false
+  var everLowerInHalfYear = true
+  var didDropThreeDays = true
+  var isIPO = true
   var tradingAmount = 0
   let unit = 1000
   

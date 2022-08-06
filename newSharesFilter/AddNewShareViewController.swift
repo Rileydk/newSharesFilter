@@ -17,6 +17,21 @@ class AddNewShareViewController: UIViewController {
   @IBOutlet weak var tradingAmountLabel: UILabel!
   
   var newShare = NewShare()
+
+  @IBAction func changeValueOfPriceEverLower(_ sender: UISegmentedControl) {
+    newShare.everLowerInHalfYear = sender.selectedSegmentIndex == 0
+  }
+  @IBAction func changeValueOfPriceDidDrop(_ sender: UISegmentedControl) {
+    newShare.didDropThreeDays = sender.selectedSegmentIndex == 0
+  }
+  @IBAction func changeValueOfIsIPO(_ sender: UISegmentedControl) {
+    newShare.isIPO = sender.selectedSegmentIndex == 0
+  }
+  @IBAction func changeValueOfTradingAmount(_ sender: UISlider) {
+    let value = Int(sender.value)
+    tradingAmountLabel.text = "近1個月交易熱絡程度：\(value == 1000 ? "\(value)以上" : "\(value)")"
+    newShare.tradingAmount = value
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

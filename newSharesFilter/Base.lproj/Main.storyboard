@@ -129,6 +129,9 @@
                                                     <segment title="是"/>
                                                     <segment title="否"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="changeValueOfPriceEverLower:" destination="BYZ-38-t0r" eventType="valueChanged" id="pcm-h4-Nwf"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -150,6 +153,9 @@
                                                     <segment title="是"/>
                                                     <segment title="否"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="changeValueOfPriceDidDrop:" destination="BYZ-38-t0r" eventType="valueChanged" id="mtm-iX-gDg"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -171,6 +177,9 @@
                                                     <segment title="是"/>
                                                     <segment title="否"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="changeValueOfIsIPO:" destination="BYZ-38-t0r" eventType="valueChanged" id="GM1-Qo-F6U"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -192,6 +201,9 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="500" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="8vc-R4-a1v">
                                                 <rect key="frame" x="33.5" y="0.0" width="257.5" height="31"/>
                                                 <color key="tintColor" systemColor="systemTealColor"/>
+                                                <connections>
+                                                    <action selector="changeValueOfTradingAmount:" destination="BYZ-38-t0r" eventType="valueChanged" id="3cM-XA-v63"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="&gt;1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-Wx-cHw">
                                                 <rect key="frame" x="311" y="0.0" width="63" height="30"/>

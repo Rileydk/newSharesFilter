@@ -19,34 +19,34 @@ class NewShare {
   
   var companyName = ""
   var stockCode = ""
-  var marketPrice = 0
-  var subscriptionPrice = 0
+  var marketPrice = 0.0
+  var subscriptionPrice = 0.0
   var issueAmount = 0
   var everLowerInHalfYear = true
   var didDropThreeDays = true
   var isIPO = true
   var tradingAmount = 0
-  let unit = 1000
+  let unit = 1000.0
   
   var isValid: Bool {
     // 暫時將tradingAmount禁止為0
-    !(companyName.isEmpty || stockCode == 0 || marketPrice == 0 || subscriptionPrice == 0 || issueAmount == 0 || tradingAmount == 0)
+    !(companyName.isEmpty || stockCode.isEmpty || marketPrice == 0.0 || subscriptionPrice == 0.0 || issueAmount == 0 || tradingAmount == 0)
   }
   
   // store property的價格是一股的價格，要乘以1000股計算
-  var actualMarketPrice: Int {
+  var actualMarketPrice: Double {
     marketPrice * unit
   }
-  var actualSubscriptionPrice: Int {
+  var actualSubscriptionPrice: Double {
     subscriptionPrice * unit
   }
   // 價差
-  var difference: Int {
+  var difference: Double {
     actualMarketPrice - actualSubscriptionPrice
   }
   // 報酬率
   var returnRate: Double {
-    Double(difference) / Double(actualMarketPrice)
+    difference / actualMarketPrice
   }
   var isInLowDemand: Bool {
     (tradingAmount < 10) || ((Double(tradingAmount) / Double(issueAmount)) < 0.1)

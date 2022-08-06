@@ -78,6 +78,7 @@ class AddNewShareViewController: UIViewController {
         return
       }
       newShareAnalysisVC.newShare = newShare
+      newShareAnalysisVC.isNewShare = true
     }
   }
 }

@@ -19,6 +19,7 @@ class NewShareAnalysisViewController: UIViewController {
   @IBOutlet weak var dateAndTimeLabel: UILabel!
   
   var newShare: NewShare?
+  var isNewShare = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,7 +38,19 @@ class NewShareAnalysisViewController: UIViewController {
     df.dateFormat = "yyyy/MM/dd HH:mm"
     let dateString = df.string(from: date)
     dateAndTimeLabel.text = dateString
+    
+    if isNewShare {
+      navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveNewAnalysis))
+      navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(discardNewAnalysis))
+    }
   }
 
+  @objc func saveNewAnalysis() {
+    print("save")
+  }
+  
+  @objc func discardNewAnalysis() {
+    print("discard")
+  }
 
 }

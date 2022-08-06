@@ -8,28 +8,63 @@
 import UIKit
 
 class NewSharesAnalysisTableViewController: UITableViewController {
+  
+  var shares = [NewShare]()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+    // Uncomment the following line to preserve selection between presentations
+    // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
+    let share1 = NewShare()
+    let share2 = NewShare()
+    let share3 = NewShare()
+    
+    share1.companyName = "A company"
+    share1.stockCode = "1234"
+    share1.marketPrice = 1234.0
+    share1.subscriptionPrice = 1000.0
+    share1.issueAmount = 400
+    
+    share2.companyName = "B company"
+    share2.stockCode = "1234"
+    share2.marketPrice = 1234.0
+    share2.subscriptionPrice = 1000.0
+    share2.issueAmount = 400
+    
+    share3.companyName = "C company"
+    share3.stockCode = "1234"
+    share3.marketPrice = 1234.0
+    share3.subscriptionPrice = 1000.0
+    share3.issueAmount = 400
+    
+    shares = [share1, share2, share3]
+  }
 
-    // MARK: - Table view data source
+  // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    1
+  }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    shares.count
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "NewShareCell", for: indexPath)
+    // 從iOS15開始，建議改用UIListContentConfiguration，以下試用
+    var content = cell.defaultContentConfiguration()
+    let share = shares[indexPath.row]
+    content.text = "\(share.companyName) \(share.stockCode)"
+    content.secondaryText = "價差：\(share.difference)   預期報酬：\(String(Int((share.returnRate) * 100.0)) + "%")"
+    cell.contentConfiguration = content
+    return cell
+  }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

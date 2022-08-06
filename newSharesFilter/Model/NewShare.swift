@@ -51,6 +51,7 @@ class NewShare {
   var isInLowDemand: Bool {
     (tradingAmount < 10) || ((Double(tradingAmount) / Double(issueAmount)) < 0.1)
   }
+  
   var reachStandard: Bool {
     (actualMarketPrice >= 100_000 && returnRate >= 0.1) || (actualMarketPrice < 100_000 && returnRate >= 0.15)
   }

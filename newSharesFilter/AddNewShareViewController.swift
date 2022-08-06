@@ -9,8 +9,15 @@ import UIKit
 
 class AddNewShareViewController: UIViewController {
   
+  @IBOutlet weak var companyNameTextField: UITextField!
+  @IBOutlet weak var stockCodeTextField: UITextField!
+  @IBOutlet weak var marketPriceTextField: UITextField!
+  @IBOutlet weak var subscriptionPriceTextField: UITextField!
+  @IBOutlet weak var issueAmountTextField: UITextField!
+  @IBOutlet weak var tradingAmountLabel: UILabel!
+  
   var newShare = NewShare()
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -24,7 +31,7 @@ class AddNewShareViewController: UIViewController {
     newShare.didDropThreeDays = false
     newShare.isIPO = false
     print(newShare.returnRate)
-    print(newShare.result)
+    print(newShare.result.rawValue)
   }
 
 

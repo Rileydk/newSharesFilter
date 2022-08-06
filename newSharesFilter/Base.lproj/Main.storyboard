@@ -61,10 +61,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-hW-UVh">
-                                                <rect key="frame" x="61" y="0.0" width="313" height="34"/>
+                                                <rect key="frame" x="61" y="0.0" width="270.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 股" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7n-e1-0DV">
+                                                <rect key="frame" x="347.5" y="0.0" width="26.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uUr-7d-xm8">
@@ -77,10 +83,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwF-rl-lHI">
-                                                <rect key="frame" x="83" y="0.0" width="291" height="34"/>
+                                                <rect key="frame" x="83" y="0.0" width="248.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 股" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFv-Yk-Itw">
+                                                <rect key="frame" x="347.5" y="0.0" width="26.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0fe-Xo-Rxz">
@@ -162,7 +174,7 @@
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近1個月交易熱絡程度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BfP-uI-aez">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近1個月交易熱絡程度：500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="BfP-uI-aez">
                                         <rect key="frame" x="0.0" y="439" width="374" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -214,6 +226,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GSL-Di-nLY" secondAttribute="trailing" constant="20" id="hEa-lt-Dd5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="companyNameTextField" destination="Qqc-Nr-Kzw" id="IXp-xb-i82"/>
+                        <outlet property="issueAmountTextField" destination="AzM-NO-6U2" id="hQD-Ez-8hA"/>
+                        <outlet property="marketPriceTextField" destination="Vce-hW-UVh" id="9ML-Bn-J54"/>
+                        <outlet property="stockCodeTextField" destination="0Jn-2p-ZA1" id="viw-6g-Sk1"/>
+                        <outlet property="subscriptionPriceTextField" destination="gwF-rl-lHI" id="Lxi-p9-wAG"/>
+                        <outlet property="tradingAmountLabel" destination="BfP-uI-aez" id="oyX-pi-gsK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
